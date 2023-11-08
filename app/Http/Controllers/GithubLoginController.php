@@ -36,6 +36,10 @@ class GithubLoginController extends Controller
             return response()->json([
                 'status' => 'sucess', 
                 'message' =>'user logged in sucessfully', 
+                'data' => [
+                    'name' => $user->name, 
+                    'email' => $user->email
+                ],
             ]);
 
         } catch (\Exception $e) {
