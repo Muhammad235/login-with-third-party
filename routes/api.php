@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\GithubLoginController;
 
 /*
@@ -19,3 +20,8 @@ use App\Http\Controllers\GithubLoginController;
 Route::get('login/github', [GithubLoginController::class, 'redirect']);
 
 Route::get('login/github/callback', [GithubLoginController::class, 'callback']);
+
+//redirect to the google login page 
+Route::get('login/google', [GoogleController::class, 'redirect']);
+
+Route::get('login/google/callback', [GoogleController::class, 'callback']);
